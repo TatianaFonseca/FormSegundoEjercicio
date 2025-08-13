@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Formulario de 3 pasos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es un formulario dividido en 3 pasos que guía al usuario para completar su información de forma sencilla y accesible.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Funcionalidad principal
 
-### `npm start`
+- **Paso 1:** Captura de nombre y correo electrónico.
+- **Paso 2:** Selección de opciones mediante boton.
+- **Paso 3:** Confirmación y envío del formulario.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Navegación
 
-### `npm test`
+- Botones **“Siguiente”** y **“Atrás”** para avanzar o retroceder entre pasos.
+- Botón **“Enviar”** en el último paso para enviar el formulario.
+- El **Paso 1 es visible por defecto** al cargar la página.
+- Al hacer clic en “Siguiente”, el formulario avanza al siguiente paso, validando los campos actuales.
+- Al enviar el formulario, se muestra un mensaje **“Gracias por enviar”**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Validaciones
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- El campo **nombre** es obligatorio y debe contener al menos 3 caracteres.
+- El campo **correo electrónico** es obligatorio y debe tener un formato válido (ejemplo: usuario@dominio.com).
+- Se muestran mensajes de error claros y amigables si alguna validación falla.
+- Los mensajes de error son accesibles y se anuncian con `aria-live="polite"` para que los lectores de pantalla los detecten sin recargar.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Accesibilidad
 
-### `npm run eject`
+- Cada campo tiene un `<label>` asociado correctamente para facilitar la navegación.
+- Se utiliza `aria-live="polite"` para que los mensajes de error y confirmación sean anunciados de forma amigable.
+- El formulario permite navegación completa con teclado (tabuladores, enter, espacio).
+- Se han eliminado viñetas y estilos por defecto para una mejor experiencia visual.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Recomendaciones de uso y extensiones
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Puedes ajustar el número mínimo de caracteres del nombre en la validación según necesidad.
+- Validar correctamente el formato del correo para evitar envíos inválidos.
+- El diseño puede ser personalizado con CSS para adaptarlo a diferentes estilos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Tecnologías utilizadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- HTML5
+- CSS3 (Flexbox para layout y estilos personalizados)
+- JavaScript para la lógica de pasos, validaciones y accesibilidad.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/TuUsuario/TuRepositorio.git
+   cd Primerejercicioboton
+   npm install
+   npm run dev
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+¡Gracias por usar este formulario paso a paso!
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Creado por Tatiana Fonseca*
