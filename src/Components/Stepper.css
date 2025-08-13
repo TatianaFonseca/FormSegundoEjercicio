@@ -1,0 +1,60 @@
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.stepper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+/* Línea entre pasos: solo hacia el siguiente paso */
+.stepper-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px; /* verticalmente centrado al círculo */
+  left: 50%; /* empieza desde el centro */
+  height: 2px;
+  width: 100%; /* ancho total del espacio del paso */
+  background: #ccc;
+  z-index: 0;
+  transform: translateX(0%);
+}
+
+/* Círculo del paso */
+.stepper-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+/* Paso activo */
+.stepper-circle.active,
+.stepper-circle.completed {
+  background: #1976d2;
+  border-color: #1976d2;
+}
+
+/* Etiqueta debajo */
+.stepper-label {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+}

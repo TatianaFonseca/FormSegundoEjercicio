@@ -1,38 +1,62 @@
-.App {
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #c6e2d8;
+
+
+  display: flex;
+  flex-direction: column; /* Mantiene título arriba y formulario abajo */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-card {
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-card input[type="text"],
+.form-card input[type="email"] {
+  width: 80%;
+  padding: 0.7rem;
+  margin-bottom: 2rem; /* corregido: antes tenías '2 rem' */
+  border-radius: 9px;
+  border: 1px solid #dac6c6;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-card label {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  margin: 0.9rem 0;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-card button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  background-color: #84C7AE;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.form-card button:hover {
+  background-color: #2e6356;
 }
